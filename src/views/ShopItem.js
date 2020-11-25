@@ -8,7 +8,9 @@ function ShopItem({ itemId, addItemToCart }) {
     <div>
       <h1>You clicked on {item.name}</h1>
 
-      <button onClick={() => addItemToCart(item)}>Add to cart</button>
+      <button onClick={() => addItemToCart({ ...item, quantity: 1 })}>
+        Add to cart
+      </button>
 
       <Link to="/shop">Go back</Link>
     </div>
