@@ -1,16 +1,8 @@
 import { Link } from "react-router-dom";
+import Catalog from "../assets/catalog.json";
 
 function Shop() {
-  const planets = [
-    { name: "Mercury" },
-    { name: "Venus" },
-    { name: "Earth" },
-    { name: "Mars" },
-    { name: "Jupiter" },
-    { name: "Saturn" },
-    { name: "Uranus" },
-    { name: "Neptumn" },
-  ];
+  const planets = Catalog;
 
   return (
     <div>
@@ -19,8 +11,8 @@ function Shop() {
       <ul>
         {planets.map((planet) => {
           return (
-            <li className="planet">
-              <Link to={`shop/${planet.name}`}>{planet.name}</Link>
+            <li key={planet.id} className="planet">
+              <Link to={`shop/${planet.id}`}>{planet.name}</Link>
             </li>
           );
         })}

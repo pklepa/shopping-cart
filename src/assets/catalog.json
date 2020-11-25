@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "name": "Mercury",
+    "price": 19.99
+  },
+  {
+    "id": 1,
+    "name": "Venus",
+    "price": 19.99
+  },
+  {
+    "id": 2,
+    "name": "Earth",
+    "price": 34.99
+  },
+  {
+    "id": 3,
+    "name": "Mars",
+    "price": 9.99
+  },
+  {
+    "id": 4,
+    "name": "Jupiter",
+    "price": 19.99
+  },
+  {
+    "id": 5,
+    "name": "Saturn",
+    "price": 19.99
+  },
+  {
+    "id": 6,
+    "name": "Uranus",
+    "price": 19.99
+  },
+  {
+    "id": 7,
+    "name": "Neptumn",
+    "price": 19.99
+  }
+]
