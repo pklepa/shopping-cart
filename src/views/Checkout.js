@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 
-function Checkout({ shoppingCart }) {
+function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
+  function handleChange(e, item) {
+    console.log(e.target.value, item.quantity);
+    if (e.target.value > item.quantity) {
+      addItemToCart(item);
+    } else {
+      removeItemFromCart(item);
+    }
+  }
+
   return (
     <div>
       {shoppingCart.length > 0 ? (
@@ -9,8 +18,19 @@ function Checkout({ shoppingCart }) {
           <ul>
             {shoppingCart.map((item) => {
               return (
-                <li>
-                  {item.name}......{item.quantity}
+                <li key={item.id}>
+                  {item.name}......{" "}
+                  <input
+                    type="number"
+                    min="1"
+                    max="99"
+                    value={item.quantity}
+                    onChange={(e) => handleChange(e, item)}
+                  />
+                  ......$ {(item.quantity * item.price).toFixed(2)}......{" "}
+                  <button onClick={() => removeItemFromCart(item, true)}>
+                    Remove item
+                  </button>
                 </li>
               );
             })}

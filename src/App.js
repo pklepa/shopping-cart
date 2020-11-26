@@ -19,6 +19,21 @@ function App() {
     }
   };
 
+  const removeItemFromCart = (item, removeAll) => {
+    const itemIndex = shoppingCart.findIndex((i) => i.id === item.id);
+    if (itemIndex > -1) {
+      const newCart = shoppingCart.slice();
+
+      removeAll ? newCart.splice(itemIndex, 1) : newCart[itemIndex].quantity--;
+
+      setShoppingCart(newCart);
+    } else {
+      console.error(
+        "Couldn't remove item from shopping cart: There's no such item in the shopping cart."
+      );
+    }
+  };
+
   // useEffect(() => {
   // console.table(shoppingCart);
   // }, [shoppingCart]);
@@ -27,7 +42,11 @@ function App() {
     <div className="page-layout">
       <Router>
         <Navbar cartSize={shoppingCart.length} />
-        <Routes shoppingCart={shoppingCart} addItemToCart={addItemToCart} />
+        <Routes
+          shoppingCart={shoppingCart}
+          addItemToCart={addItemToCart}
+          removeItemFromCart={removeItemFromCart}
+        />
       </Router>
     </div>
   );
