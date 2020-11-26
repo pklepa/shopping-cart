@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -7,7 +7,7 @@ import Routes from "./Routes";
 function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
 
-  const addItemToCart = (item) => {
+  function addItemToCart(item) {
     const itemIndex = shoppingCart.findIndex((i) => i.id === item.id);
     if (itemIndex > -1) {
       const newCart = shoppingCart.slice();
@@ -17,9 +17,9 @@ function App() {
     } else {
       setShoppingCart([...shoppingCart, item]);
     }
-  };
+  }
 
-  const removeItemFromCart = (item, removeAll) => {
+  function removeItemFromCart(item, removeAll) {
     const itemIndex = shoppingCart.findIndex((i) => i.id === item.id);
     if (itemIndex > -1) {
       const newCart = shoppingCart.slice();
@@ -32,11 +32,7 @@ function App() {
         "Couldn't remove item from shopping cart: There's no such item in the shopping cart."
       );
     }
-  };
-
-  // useEffect(() => {
-  // console.table(shoppingCart);
-  // }, [shoppingCart]);
+  }
 
   return (
     <div className="page-layout">
