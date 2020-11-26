@@ -1,0 +1,10 @@
+:root {
+  --black: #333;
+  --deep-black: #000;
+  --white: #fff;
+}
+
+* {
+  font-size: 16px;
+  color: inherit;
+}

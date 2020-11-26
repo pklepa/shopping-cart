@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Routes from "./Routes";
+
+import "./assets/global-styles/reset.css";
+import "./assets/global-styles/fonts.css";
+import "./assets/global-styles/global.css";
+import { Layout } from "./styles";
 
 function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
@@ -35,7 +40,7 @@ function App() {
   }
 
   return (
-    <div className="page-layout">
+    <Layout>
       <Router>
         <Navbar cartSize={shoppingCart.length} />
         <Routes
@@ -44,7 +49,7 @@ function App() {
           removeItemFromCart={removeItemFromCart}
         />
       </Router>
-    </div>
+    </Layout>
   );
 }
 
