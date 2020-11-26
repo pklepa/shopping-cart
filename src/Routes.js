@@ -3,6 +3,8 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./views/Home";
 import Shop from "./views/Shop";
 import ShopItem from "./views/ShopItem.js";
+import Checkout from "./views/Checkout";
+import ErrorPage from "./views/ErrorPage";
 
 const Routes = ({ addItemToCart }) => {
   return (
@@ -19,6 +21,8 @@ const Routes = ({ addItemToCart }) => {
           />
         )}
       />
+      <Route exact path="/checkout" component={Checkout} />;
+      <Route path="/" component={ErrorPage} />
     </Switch>
   );
 };
