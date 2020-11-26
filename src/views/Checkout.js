@@ -35,6 +35,16 @@ function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
               );
             })}
           </ul>
+
+          <button
+            onClick={() =>
+              window.alert(
+                "Watch out! This is not a real shopping site, man..."
+              )
+            }
+          >
+            Proceed to payment
+          </button>
         </>
       ) : (
         <h1>Your cart is empty</h1>
