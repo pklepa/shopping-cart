@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Img from "../../assets/images//background/night-sky.jpg";
 
+import { ChevronsRight, ChevronsLeft } from "styled-icons/boxicons-regular";
+
 export const Container = styled.div`
   flex: 1;
 
@@ -34,6 +36,7 @@ export const Container = styled.div`
   h2 {
     font-size: 14px;
     font-weight: 400;
+    line-height: 1.3em;
     letter-spacing: 6px;
     text-align: center;
 
@@ -46,7 +49,7 @@ export const Container = styled.div`
     padding: 6px 10px 6px 12px;
     font-size: 20px;
     font-weight: 500;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 
     transition: 0.5s;
 
@@ -55,4 +58,42 @@ export const Container = styled.div`
       color: var(--deep-black);
     }
   }
+
+  & > div {
+    display: flex;
+    align-items: center;
+
+    margin-top: 100px;
+
+    & > svg {
+      animation: arrowsMovement 4s ease-in-out;
+      animation-iteration-count: infinite;
+      margin: 0 16px;
+
+      @keyframes arrowsMovement {
+        0%,
+        30%,
+        50%,
+        70%,
+        100% {
+          margin: 0 16px;
+        }
+
+        40%,
+        60% {
+          margin: 0 6px;
+        }
+      }
+    }
+  }
+`;
+
+export const ArrowRight = styled(ChevronsRight)`
+  color: white;
+  width: 32px;
+`;
+
+export const ArrowLeft = styled(ChevronsLeft)`
+  color: white;
+  width: 32px;
 `;
