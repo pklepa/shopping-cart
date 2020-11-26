@@ -19,15 +19,15 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    console.table(shoppingCart);
-  }, [shoppingCart]);
+  // useEffect(() => {
+  // console.table(shoppingCart);
+  // }, [shoppingCart]);
 
   return (
     <div className="page-layout">
       <Router>
         <Navbar cartSize={shoppingCart.length} />
-        <Routes addItemToCart={addItemToCart} />
+        <Routes shoppingCart={shoppingCart} addItemToCart={addItemToCart} />
       </Router>
     </div>
   );

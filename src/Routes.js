@@ -6,7 +6,7 @@ import ShopItem from "./views/ShopItem.js";
 import Checkout from "./views/Checkout";
 import ErrorPage from "./views/ErrorPage";
 
-const Routes = ({ addItemToCart }) => {
+const Routes = ({ shoppingCart, addItemToCart }) => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
@@ -21,7 +21,12 @@ const Routes = ({ addItemToCart }) => {
           />
         )}
       />
-      <Route exact path="/checkout" component={Checkout} />;
+      <Route
+        exact
+        path="/checkout"
+        render={() => <Checkout shoppingCart={shoppingCart} />}
+      />
+      ;
       <Route path="/" component={ErrorPage} />
     </Switch>
   );
