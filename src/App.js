@@ -7,7 +7,7 @@ import Routes from "./Routes";
 import "./assets/global-styles/reset.css";
 import "./assets/global-styles/fonts.css";
 import "./assets/global-styles/global.css";
-import { Layout } from "./styles";
+import { Layout, Main } from "./styles";
 
 function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
@@ -43,11 +43,13 @@ function App() {
     <Layout>
       <Router>
         <Navbar cartSize={shoppingCart.length} />
-        <Routes
-          shoppingCart={shoppingCart}
-          addItemToCart={addItemToCart}
-          removeItemFromCart={removeItemFromCart}
-        />
+        <Main>
+          <Routes
+            shoppingCart={shoppingCart}
+            addItemToCart={addItemToCart}
+            removeItemFromCart={removeItemFromCart}
+          />
+        </Main>
       </Router>
     </Layout>
   );

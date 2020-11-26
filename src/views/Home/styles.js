@@ -1,0 +1,58 @@
+import styled from "styled-components";
+import Img from "../../assets/images//background/night-sky.jpg";
+
+export const Container = styled.div`
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url(${Img});
+  background-size: cover;
+  background-color: var(--black);
+
+  h1,
+  h2,
+  a {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 55px;
+    font-weight: 500;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+  }
+
+  h1 {
+    font-size: 55px;
+    letter-spacing: 6px;
+    background-color: var(--deep-black);
+    padding: 6px 10px 6px 12px;
+  }
+
+  h2 {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-align: center;
+
+    width: 600px;
+    margin-top: 10px;
+  }
+
+  a {
+    background-color: var(--deep-black);
+    padding: 6px 10px 6px 12px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 100px;
+
+    transition: 0.5s;
+
+    &:hover {
+      background-color: white;
+      color: var(--deep-black);
+    }
+  }
+`;
