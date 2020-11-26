@@ -40,7 +40,7 @@ export const Container = styled.div`
     letter-spacing: 6px;
     text-align: center;
 
-    width: 600px;
+    max-width: 600px;
     margin-top: 10px;
   }
 
