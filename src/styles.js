@@ -12,5 +12,5 @@ export const Main = styled.main`
   display: flex;
   justify-content: center;
 
-  background-color: var(--black);
+  background-color: #c3c3c3;
 `;
