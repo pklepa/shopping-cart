@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
 import Catalog from "../../assets/catalog.json";
 
-import { Container, ItemCard, Test } from "./styles";
-
-import Img from "../../assets/images/catalog/poster_venus_front_a.jpg";
+import {
+  OuterContainer,
+  Container,
+  CollectionTitle,
+  Divider,
+  ItemsContainer,
+  ItemCard,
+} from "./styles";
 
 function Shop() {
   const planets = Catalog;
 
   function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => {
-      images[item.replace("./", "")] = r(item);
+    r.keys().map((item) => {
+      return (images[item.replace("./", "")] = r(item));
     });
     return images;
   }
@@ -21,17 +26,23 @@ function Shop() {
   );
 
   return (
-    <Container>
-      {planets.map((planet) => {
-        return (
-          <Link key={planet.id} to={`shop/${planet.id}`}>
-            <ItemCard>
-              <img src={images[planet.imgs[0]].default} alt="Item image" />
-            </ItemCard>
-          </Link>
-        );
-      })}
-    </Container>
+    <OuterContainer>
+      <Container>
+        <CollectionTitle>Collection || Planets</CollectionTitle>
+
+        <ItemsContainer>
+          {planets.map((planet) => {
+            return (
+              <Link key={planet.id} to={`shop/${planet.id}`}>
+                <ItemCard>
+                  <img src={images[planet.imgs[0]].default} alt="" />
+                </ItemCard>
+              </Link>
+            );
+          })}
+        </ItemsContainer>
+      </Container>
+    </OuterContainer>
   );
 }
 

@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   align-items: center;
 
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 40px;
 
   background-color: var(--deep-black);
 
@@ -36,6 +36,10 @@ export const Nav = styled.nav`
       padding-left: 20px;
     }
   }
+
+  @media (max-width: 630px) {
+    justify-content: center;
+  }
 `;
 
 export const Title = styled.h1`
@@ -50,5 +54,9 @@ export const Title = styled.h1`
 
   &:hover {
     transform: scale(1.02);
+  }
+
+  @media (max-width: 630px) {
+    display: none;
   }
 `;
