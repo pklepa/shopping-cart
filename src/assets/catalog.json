@@ -32,7 +32,8 @@
     "name": "Jupiter",
     "product_type": "Poster",
     "price": 19.99,
-    "imgs": ["poster_jupiter_front_a.jpg", "poster_jupiter_back.jpg"]
+    "imgs": ["poster_jupiter_front_a.jpg", "poster_jupiter_back.jpg"],
+    "description": "This true color mosaic of Jupiter was constructed from images taken by the narrow angle camera onboard NASA's Cassini spacecraft in December 2000. Credit: NASA/JPL/Space Science Institute."
   },
   {
     "id": 5,
