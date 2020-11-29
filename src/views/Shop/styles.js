@@ -53,18 +53,39 @@ export const ItemsContainer = styled.div`
 export const ItemCard = styled.div`
   flex: 0 1 300px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 
   background-color: var(--white);
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   margin: 10px 10px 20px;
 
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
   img {
-    height: 65vh;
+    height: 60vh;
+  }
 
-    transition: 0.2s;
+  h1,
+  p {
+    font-size: 18px;
+    font-family: "Inconsolata", monospace;
+    font-weight: bold;
 
-    &:hover {
-      transform: scale(1.1);
-    }
+    margin-top: 8px;
+  }
+
+  span {
+    font-size: 11px;
+    font-family: "Inconsolata", monospace;
+    letter-spacing: 1px;
+    background-color: #e3e3e3;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin-top: 8px;
   }
 `;

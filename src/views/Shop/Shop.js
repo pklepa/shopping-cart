@@ -36,6 +36,9 @@ function Shop() {
               <Link key={planet.id} to={`shop/${planet.id}`}>
                 <ItemCard>
                   <img src={images[planet.imgs[0]].default} alt="" />
+                  <h1>{planet.name}</h1>
+                  <span>{planet.product_type}</span>
+                  <p>$ {planet.price}</p>
                 </ItemCard>
               </Link>
             );
