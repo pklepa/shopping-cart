@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const OuterContainer = styled.section`
   display: flex;
   justify-content: center;
+  align-items: center;
 
   flex-grow: 1;
 
@@ -16,70 +17,26 @@ export const OuterContainer = styled.section`
 `;
 
 export const Container = styled.div`
-  height: 100%;
   flex-grow: 0;
 
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 20px 40px;
 
   background-color: var(--white);
-`;
-
-export const MainImage = styled.img`
-  flex-grow: 0;
-  max-height: calc(100vh - 128px);
-`;
-
-export const ItemDetails = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  width: 400px;
-  padding: 0 20px 0 40px;
-
-  h1,
-  p,
-  span {
-    font-family: "Inconsolata", monospace;
-  }
 
   h1 {
-    font-size: 24px;
-    font-weight: bold;
-  }
+    font-size: 20px;
+    font-family: "IBM Plex mono", monospace;
+    color: var(--black);
 
-  span {
-    font-size: 11px;
-    letter-spacing: 1px;
-    background-color: #e3e3e3;
-    border-radius: 2px;
-    padding: 2px 4px;
-    margin-top: 10px;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 1.3em;
-    margin: 16px 0;
+    width: 600px;
+    margin-bottom: 40px;
 
     strong {
-      font-weight: 600;
-    }
-  }
-
-  .buttons-wrapper {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    & > div button {
-      margin-right: 10px;
+      font-weight: 500;
     }
   }
 `;

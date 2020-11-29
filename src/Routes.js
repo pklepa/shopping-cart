@@ -4,7 +4,7 @@ import Home from "./views/Home/Home.js";
 import Shop from "./views/Shop/Shop";
 import ShopItem from "./views/ShopItem/ShopItem.js";
 import Checkout from "./views/Checkout";
-import ErrorPage from "./views/ErrorPage";
+import ErrorPage from "./views/ErrorPage/ErrorPage.js";
 
 const Routes = ({ shoppingCart, addItemToCart, removeItemFromCart }) => {
   return (
