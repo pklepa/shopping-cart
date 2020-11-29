@@ -65,7 +65,7 @@ export const ItemDetails = styled.div`
     margin: 16px 0;
 
     strong {
-      font-weight: 500;
+      font-weight: 600;
     }
   }
 
