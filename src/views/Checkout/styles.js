@@ -5,6 +5,7 @@ export const OuterContainer = styled.section`
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   background-color: #e3e3e3;
 
@@ -20,9 +21,36 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 40px;
 
+  min-height: 80vh;
+
   background-color: var(--white);
+
+  & > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > p {
+      font-size: 18px;
+      font-family: "IBM Plex mono", monospace;
+      font-weight: 500;
+
+      margin: 20px 0 12px;
+    }
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      margin-top: 8px;
+    }
+  }
 `;
 
 export const Heading = styled.h1`
@@ -35,20 +63,40 @@ export const Heading = styled.h1`
   background-color: var(--deep-black);
   padding: 4px 8px;
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `;
 
 export const BagItem = styled.li`
   display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid #c3c3c3;
 
   img {
-    width: 150px;
+    width: 120px;
   }
 `;
 
 export const ItemDetails = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 240px;
+
+  margin-left: 20px;
+
+  .upper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 
   h1,
   p {
@@ -67,21 +115,31 @@ export const ItemDetails = styled.div`
     margin-top: 8px;
   }
 
-  & > div {
+  .quantity-wrapper {
     display: flex;
     align-items: center;
 
-    /* button {
-      width: 20px;
-      height: 20px;
+    margin: 20px 0 8px;
 
-      font-size: 16px;
-      color: var(--white);
-      background-color: var(--black);
-      padding: 4px;
-      border-radius: 50%;
+    & > input {
+      margin: 0 8px;
+      padding: 4px 6px;
+      border: 2px solid var(--black);
+      border-radius: 3px;
+
       text-align: center;
-    } */
+    }
+  }
+
+  & > button {
+    background: none;
+    font-size: 11px;
+    font-family: "Inconsolata", monospace;
+    letter-spacing: 1px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -91,10 +149,16 @@ export const ControlButton = styled.button`
   outline: none;
 
   & > svg {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+
+    transition: 0.2s;
 
     color: ${(props) => (props.enabled ? "var(--black)" : "#c3c3c3")};
+
+    &:active {
+      color: ${(props) => (props.enabled ? "#666" : "#aaa")};
+    }
   }
 `;
 

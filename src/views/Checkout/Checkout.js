@@ -37,12 +37,16 @@ function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
                 <BagItem key={item.id}>
                   <img src={img.default} alt="Aaaaa" />
                   <ItemDetails>
-                    <h1>{item.name}</h1>
-                    <span>{item.product_type}</span>
+                    <div className="upper-wrapper">
+                      <div>
+                        <h1>{item.name}</h1>
+                        <span>{item.product_type}</span>
+                      </div>
 
-                    <p>{item.price}</p>
+                      <p>$ {item.price}</p>
+                    </div>
 
-                    <div>
+                    <div className="quantity-wrapper">
                       <ControlButton enabled={item.quantity > 1}>
                         <MinusIcon
                           onClick={() =>
@@ -68,41 +72,40 @@ function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
                       </ControlButton>
                     </div>
 
-                    <Button
-                      small
-                      onClick={() => removeItemFromCart(item, "ALL")}
-                    >
+                    <button onClick={() => removeItemFromCart(item, "ALL")}>
                       Remove item
-                    </Button>
+                    </button>
                   </ItemDetails>
                 </BagItem>
               );
             })}
+
+            <p>
+              Total:{" "}
+              {shoppingCart
+                .reduce((total, item) => {
+                  return total + item.price * item.quantity;
+                }, 0)
+                .toFixed(2)}
+            </p>
           </ul>
 
-          <p>
-            Total:{" "}
-            {shoppingCart
-              .reduce((total, item) => {
-                return total + item.price * item.quantity;
-              }, 0)
-              .toFixed(2)}
-          </p>
+          <div>
+            <Button
+              primary
+              onClick={() =>
+                window.alert(
+                  "Watch out! This is not a real shopping site, man..."
+                )
+              }
+            >
+              Proceed to payment
+            </Button>
 
-          <Button
-            primary
-            onClick={() =>
-              window.alert(
-                "Watch out! This is not a real shopping site, man..."
-              )
-            }
-          >
-            Proceed to payment
-          </Button>
-
-          <Button small>
-            <Link to="/shop">Back to shop</Link>
-          </Button>
+            <Button small>
+              <Link to="/shop">Back to shop</Link>
+            </Button>
+          </div>
         </Container>
       ) : (
         <Container>
