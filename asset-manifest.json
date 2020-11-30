@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.d15a47d2.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.8ab5cde5.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.8ab5cde5.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.fc0dbabf.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.fc0dbabf.js.map",
+    "static/js/2.5e2ded5b.chunk.js": "/shopping-cart/static/js/2.5e2ded5b.chunk.js",
+    "static/js/2.5e2ded5b.chunk.js.map": "/shopping-cart/static/js/2.5e2ded5b.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.d15a47d2.chunk.css.map": "/shopping-cart/static/css/main.d15a47d2.chunk.css.map",
+    "static/js/2.5e2ded5b.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.5e2ded5b.chunk.js.LICENSE.txt",
+    "static/media/night-sky.e8748034.jpg": "/shopping-cart/static/media/night-sky.e8748034.jpg",
+    "static/media/poster_earth_back.jpg": "/shopping-cart/static/media/poster_earth_back.998fdbba.jpg",
+    "static/media/poster_earth_front_a.jpg": "/shopping-cart/static/media/poster_earth_front_a.12bd73f0.jpg",
+    "static/media/poster_earth_front_g.jpg": "/shopping-cart/static/media/poster_earth_front_g.55d4bca1.jpg",
+    "static/media/poster_jupiter_back.jpg": "/shopping-cart/static/media/poster_jupiter_back.2a7aff87.jpg",
+    "static/media/poster_jupiter_front_a.jpg": "/shopping-cart/static/media/poster_jupiter_front_a.43053e17.jpg",
+    "static/media/poster_mars_back.jpg": "/shopping-cart/static/media/poster_mars_back.afcdc700.jpg",
+    "static/media/poster_mars_front_a.jpg": "/shopping-cart/static/media/poster_mars_front_a.a99ff344.jpg",
+    "static/media/poster_mercury_back.jpg": "/shopping-cart/static/media/poster_mercury_back.98ff599d.jpg",
+    "static/media/poster_mercury_front_a.jpg": "/shopping-cart/static/media/poster_mercury_front_a.fd838ed0.jpg",
+    "static/media/poster_neptune_back.jpg": "/shopping-cart/static/media/poster_neptune_back.3abe4b8a.jpg",
+    "static/media/poster_neptune_front_a.jpg": "/shopping-cart/static/media/poster_neptune_front_a.f526fc03.jpg",
+    "static/media/poster_saturn_back.jpg": "/shopping-cart/static/media/poster_saturn_back.d12d5adb.jpg",
+    "static/media/poster_saturn_front_a.jpg": "/shopping-cart/static/media/poster_saturn_front_a.d353d003.jpg",
+    "static/media/poster_uranus_back.jpg": "/shopping-cart/static/media/poster_uranus_back.c4f82b57.jpg",
+    "static/media/poster_uranus_front_a.jpg": "/shopping-cart/static/media/poster_uranus_front_a.3b3db79d.jpg",
+    "static/media/poster_venus_back.jpg": "/shopping-cart/static/media/poster_venus_back.4bacb614.jpg",
+    "static/media/poster_venus_front_a.jpg": "/shopping-cart/static/media/poster_venus_front_a.4a78b7ce.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fc0dbabf.js",
+    "static/js/2.5e2ded5b.chunk.js",
+    "static/css/main.d15a47d2.chunk.css",
+    "static/js/main.8ab5cde5.chunk.js"
+  ]
+}
