@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 import Img from "../../assets/images//background/night-sky.jpg";
 
 import { ChevronsRight, ChevronsLeft } from "styled-icons/boxicons-regular";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   flex: 1;
 
   display: flex;

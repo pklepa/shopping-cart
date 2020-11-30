@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 import { PlusCircle, MinusCircle } from "styled-icons/boxicons-solid";
 import { Cart3 } from "styled-icons/bootstrap";
 
-export const OuterContainer = styled.section`
+export const OuterContainer = styled(motion.div)`
   flex: 1;
   display: flex;
   justify-content: center;

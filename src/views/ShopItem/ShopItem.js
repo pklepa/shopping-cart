@@ -21,7 +21,11 @@ function ShopItem({ itemId, addItemToCart }) {
   let img = images("./" + item.imgs[0]).default;
 
   return (
-    <OuterContainer>
+    <OuterContainer
+      exit={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+    >
       <Container>
         <MainImage src={img} alt="" />
 

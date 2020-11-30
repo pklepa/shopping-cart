@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const OuterContainer = styled.section`
+export const OuterContainer = styled(motion.div)`
   display: flex;
   justify-content: center;
 

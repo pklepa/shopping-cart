@@ -25,7 +25,11 @@ function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
   const images = require.context("../../assets/images/catalog", true);
 
   return (
-    <OuterContainer>
+    <OuterContainer
+      exit={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+    >
       {shoppingCart.length > 0 ? (
         <Container>
           <Heading>Your shopping bag</Heading>
