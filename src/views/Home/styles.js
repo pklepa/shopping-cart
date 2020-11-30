@@ -27,10 +27,11 @@ export const Container = styled.div`
   }
 
   h1 {
+    font-family: "Big Shoulders Stencil Display", monospace;
     font-size: 55px;
-    letter-spacing: 6px;
+    letter-spacing: 10px;
     background-color: var(--deep-black);
-    padding: 6px 10px 6px 12px;
+    padding: 6px 8px 6px 14px;
   }
 
   h2 {

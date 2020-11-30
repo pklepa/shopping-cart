@@ -43,12 +43,13 @@ export const Nav = styled.nav`
 `;
 
 export const Title = styled.h1`
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Big Shoulders Stencil Display", monospace;
   font-size: 28px;
   font-weight: 400;
   color: var(--white);
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 3px;
 
   transition: 0.1s;
 
