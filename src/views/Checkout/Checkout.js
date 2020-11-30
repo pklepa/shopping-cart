@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 
+import { Button } from "../../components/Button/Button";
+import { OuterContainer, Container, Heading } from "./styles";
+
 function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
   function handleChange(e, item) {
     console.log(e.target.value, item.quantity);
@@ -11,10 +14,11 @@ function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
   }
 
   return (
-    <div>
+    <OuterContainer>
       {shoppingCart.length > 0 ? (
-        <>
-          <h1>Currently you cart has:</h1>
+        <Container>
+          <Heading>Your shopping bag</Heading>
+
           <ul>
             {shoppingCart.map((item) => {
               return (
@@ -36,7 +40,7 @@ function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
             })}
           </ul>
 
-          <button
+          <Button
             onClick={() =>
               window.alert(
                 "Watch out! This is not a real shopping site, man..."
@@ -44,15 +48,21 @@ function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
             }
           >
             Proceed to payment
-          </button>
-        </>
-      ) : (
-        <h1>Your cart is empty</h1>
-      )}
-      {console.table(shoppingCart)}
+          </Button>
 
-      <Link to="/shop">Back to shop</Link>
-    </div>
+          <Button>
+            <Link to="/shop">Back to shop</Link>
+          </Button>
+        </Container>
+      ) : (
+        <Container>
+          <h1>Your cart is empty</h1>
+          <Button>
+            <Link to="/shop">Back to shop</Link>
+          </Button>
+        </Container>
+      )}
+    </OuterContainer>
   );
 }
 

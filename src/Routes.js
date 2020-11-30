@@ -1,9 +1,9 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./views/Home/Home.js";
-import Shop from "./views/Shop/Shop";
+import Shop from "./views/Shop/Shop.js";
 import ShopItem from "./views/ShopItem/ShopItem.js";
-import Checkout from "./views/Checkout";
+import Checkout from "./views/Checkout/Checkout.js";
 import ErrorPage from "./views/ErrorPage/ErrorPage.js";
 
 const Routes = ({ shoppingCart, addItemToCart, removeItemFromCart }) => {

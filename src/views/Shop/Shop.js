@@ -5,7 +5,6 @@ import {
   OuterContainer,
   Container,
   CollectionTitle,
-  Divider,
   ItemsContainer,
   ItemCard,
 } from "./styles";
