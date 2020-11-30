@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { PlusCircle, MinusCircle } from "styled-icons/boxicons-solid";
+import { Cart3 } from "styled-icons/bootstrap";
 
 export const OuterContainer = styled.section`
   flex: 1;
@@ -165,3 +166,22 @@ export const ControlButton = styled.button`
 
 export const PlusIcon = styled(PlusCircle)``;
 export const MinusIcon = styled(MinusCircle)``;
+
+export const CartIcon = styled(Cart3)`
+  width: 60px;
+
+  @keyframes emptyCart {
+    0%,
+    100% {
+      transform: rotate(10deg);
+      color: #333;
+    }
+    50% {
+      transform: rotate(-10deg);
+      color: red;
+    }
+  }
+
+  animation: emptyCart 3s ease-in-out;
+  animation-iteration-count: infinite;
+`;

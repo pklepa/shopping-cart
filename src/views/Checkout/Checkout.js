@@ -10,6 +10,7 @@ import {
   ControlButton,
   PlusIcon,
   MinusIcon,
+  CartIcon,
 } from "./styles";
 
 function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
@@ -109,7 +110,8 @@ function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
         </Container>
       ) : (
         <Container>
-          <h1>Your cart is empty</h1>
+          <Heading>Your cart is empty</Heading>
+          <CartIcon />
           <Button>
             <Link to="/shop">Back to shop</Link>
           </Button>
