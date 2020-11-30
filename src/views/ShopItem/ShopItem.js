@@ -17,22 +17,13 @@ function ShopItem({ itemId, addItemToCart }) {
     setShowCheckoutBtn(true);
   }
 
-  function importAll(r) {
-    let images = {};
-    r.keys().map((item) => {
-      return (images[item.replace("./", "")] = r(item));
-    });
-    return images;
-  }
-
-  const images = importAll(
-    require.context("../../assets/images/catalog", false, /\.(png|jpe?g|svg)$/)
-  );
+  const images = require.context("../../assets/images/catalog", true);
+  let img = images("./" + item.imgs[0]).default;
 
   return (
     <OuterContainer>
       <Container>
-        <MainImage src={images[item.imgs[0]].default} alt="" />
+        <MainImage src={img} alt="" />
 
         <ItemDetails>
           <h1>{item.name}</h1>

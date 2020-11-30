@@ -1,17 +1,27 @@
 import { Link } from "react-router-dom";
 
 import { Button } from "../../components/Button/Button";
-import { OuterContainer, Container, Heading } from "./styles";
+import {
+  OuterContainer,
+  Container,
+  Heading,
+  BagItem,
+  ItemDetails,
+  ControlButton,
+  PlusIcon,
+  MinusIcon,
+} from "./styles";
 
 function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
   function handleChange(e, item) {
-    console.log(e.target.value, item.quantity);
     if (e.target.value > item.quantity) {
       addItemToCart(item);
     } else {
       removeItemFromCart(item);
     }
   }
+
+  const images = require.context("../../assets/images/catalog", true);
 
   return (
     <OuterContainer>
@@ -21,26 +31,66 @@ function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
 
           <ul>
             {shoppingCart.map((item) => {
+              let img = images("./" + item.imgs[0]);
+
               return (
-                <li key={item.id}>
-                  {item.name}......{" "}
-                  <input
-                    type="number"
-                    min="1"
-                    max="99"
-                    value={item.quantity}
-                    onChange={(e) => handleChange(e, item)}
-                  />
-                  ......$ {(item.quantity * item.price).toFixed(2)}......{" "}
-                  <button onClick={() => removeItemFromCart(item, true)}>
-                    Remove item
-                  </button>
-                </li>
+                <BagItem key={item.id}>
+                  <img src={img.default} alt="Aaaaa" />
+                  <ItemDetails>
+                    <h1>{item.name}</h1>
+                    <span>{item.product_type}</span>
+
+                    <p>{item.price}</p>
+
+                    <div>
+                      <ControlButton enabled={item.quantity > 1}>
+                        <MinusIcon
+                          onClick={() =>
+                            item.quantity > 1 && removeItemFromCart(item)
+                          }
+                        />
+                      </ControlButton>
+
+                      <input
+                        type="number"
+                        min="1"
+                        max="99"
+                        value={item.quantity}
+                        onChange={(e) => handleChange(e, item)}
+                      />
+
+                      <ControlButton enabled={item.quantity < 99}>
+                        <PlusIcon
+                          onClick={() =>
+                            item.quantity <= 99 && addItemToCart(item)
+                          }
+                        />
+                      </ControlButton>
+                    </div>
+
+                    <Button
+                      small
+                      onClick={() => removeItemFromCart(item, "ALL")}
+                    >
+                      Remove item
+                    </Button>
+                  </ItemDetails>
+                </BagItem>
               );
             })}
           </ul>
 
+          <p>
+            Total:{" "}
+            {shoppingCart
+              .reduce((total, item) => {
+                return total + item.price * item.quantity;
+              }, 0)
+              .toFixed(2)}
+          </p>
+
           <Button
+            primary
             onClick={() =>
               window.alert(
                 "Watch out! This is not a real shopping site, man..."
@@ -50,7 +100,7 @@ function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
             Proceed to payment
           </Button>
 
-          <Button>
+          <Button small>
             <Link to="/shop">Back to shop</Link>
           </Button>
         </Container>

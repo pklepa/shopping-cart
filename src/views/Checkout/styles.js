@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PlusCircle, MinusCircle } from "styled-icons/boxicons-solid";
 
 export const OuterContainer = styled.section`
   flex: 1;
@@ -27,10 +28,75 @@ export const Container = styled.section`
 export const Heading = styled.h1`
   font-size: 26px;
   font-family: "IBM Plex mono", monospace;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
 
   color: var(--white);
-  background-color: var(--black);
+  background-color: var(--deep-black);
   padding: 4px 8px;
+
+  margin-bottom: 20px;
 `;
+
+export const BagItem = styled.li`
+  display: flex;
+
+  img {
+    width: 150px;
+  }
+`;
+
+export const ItemDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  h1,
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "IBM Plex mono", monospace;
+  }
+
+  span {
+    font-size: 11px;
+    font-family: "Inconsolata", monospace;
+    letter-spacing: 1px;
+    background-color: #e3e3e3;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin-top: 8px;
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+
+    /* button {
+      width: 20px;
+      height: 20px;
+
+      font-size: 16px;
+      color: var(--white);
+      background-color: var(--black);
+      padding: 4px;
+      border-radius: 50%;
+      text-align: center;
+    } */
+  }
+`;
+
+export const ControlButton = styled.button`
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  & > svg {
+    width: 25px;
+    height: 25px;
+
+    color: ${(props) => (props.enabled ? "var(--black)" : "#c3c3c3")};
+  }
+`;
+
+export const PlusIcon = styled(PlusCircle)``;
+export const MinusIcon = styled(MinusCircle)``;
