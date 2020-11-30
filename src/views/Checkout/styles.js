@@ -94,6 +94,7 @@ export const ItemDetails = styled.div`
 
     & > div {
       display: flex;
+      align-items: flex-start;
       flex-direction: column;
     }
   }
