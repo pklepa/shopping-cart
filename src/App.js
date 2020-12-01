@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Routes from "./Routes";
@@ -41,7 +41,7 @@ function App() {
 
   return (
     <Layout>
-      <Router>
+      <HashRouter basename="/">
         <Navbar cartSize={shoppingCart.length} />
         <Main>
           <Routes
@@ -50,7 +50,7 @@ function App() {
             removeItemFromCart={removeItemFromCart}
           />
         </Main>
-      </Router>
+      </HashRouter>
     </Layout>
   );
 }
