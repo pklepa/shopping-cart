@@ -38,8 +38,8 @@ Beyond that, other learning outcomes were:
 
 ### Libraries, extensions and tools
 
-- [ESLint](https://eslint.org/) - A linter tool to standardize code
 <!-- - [Firebase](https://firebase.google.com/) - Cloud services (database, authentication) -->
+- [ESLint](https://eslint.org/) - A linter tool to standardize code
 - [Framer Motion](https://www.framer.com/motion/) - Motion library for React.
 - [Github Pages](https://pages.github.com/) - Hosting
 - [Prettier](https://prettier.io/) - Code formatter
