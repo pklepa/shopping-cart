@@ -98,11 +98,7 @@ function Checkout({ shoppingCart, addItemToCart, removeItemFromCart }) {
           <div>
             <Button
               primary
-              onClick={() =>
-                window.alert(
-                  "Watch out! This is not a real shopping site, man..."
-                )
-              }
+              onClick={() => window.alert("Thanks for coming by!")}
             >
               Proceed to payment
             </Button>
