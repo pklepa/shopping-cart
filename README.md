@@ -4,7 +4,7 @@
 
 [Odin] Clean design of an e-commerce page with shopping-cart capabilities.
 
-> See it live on [pklepa.github.io/discord-clone](https://pklepa.github.io/discord-clone/)
+> See it live on [pklepa.github.io/shopping-cart](https://pklepa.github.io/shopping-cart/)
 
 ### Screenshots
 
