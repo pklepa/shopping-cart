@@ -38,7 +38,13 @@ function Shop() {
             return (
               <Link key={planet.id} to={`shop/${planet.id}`}>
                 <ItemCard>
-                  <img src={images[planet.imgs[0]].default} alt="" />
+                  {/* <img src={images[planet.imgs[0]].default} alt="" /> */}
+                  <div
+                    className="card-image"
+                    style={{
+                      backgroundImage: `url(${images[planet.imgs[0]].default})`,
+                    }}
+                  ></div>
                   <h1>{planet.name}</h1>
                   <span>{planet.product_type}</span>
                   <p>$ {planet.price}</p>

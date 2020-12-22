@@ -66,6 +66,14 @@ export const ItemCard = styled.div`
     height: 60vh;
   }
 
+  .card-image {
+    height: 60vh;
+    width: 280px;
+    background-color: #333;
+    background-position: center;
+    background-size: cover;
+  }
+
   h1,
   p {
     font-size: 18px;
